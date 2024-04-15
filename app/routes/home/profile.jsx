@@ -18,19 +18,16 @@ import styles from './profile.module.css';
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Hi there" start={visible} delay={500} />
+      <DecoderText text="Hi there!" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+    Greetings, I am Mark Angel Rapelo, a proud alumnus of the Technological Institute of the Philippines, holding a degree in Computer Science. Over the past four months, I have been diligently honing my skills in front-end development, immersing myself in the latest technologies and best practices in the field.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+    I am eager to apply my acquired front-end development skills in real-world scenarios.   
+    </Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+    Email me at markrapelo@gmail.com   
     </Text>
   </Fragment>
 );
@@ -56,14 +53,17 @@ export const Profile = ({ id, visible, sectionRef }) => {
             <div className={styles.column}>
               <ProfileText visible={visible} titleId={titleId} />
               <Button
-                secondary
-                className={styles.button}
-                data-visible={visible}
-                href="/contact"
-                icon="send"
-              >
-                Send me a message
-              </Button>
+  secondary
+  className={styles.button}
+  data-visible={visible}
+  onClick={() => window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=markrapelo@gmail.com', '_blank')}
+  icon="send"
+>
+  Send me a message
+</Button>
+
+
+
             </div>
             <div className={styles.column}>
               <div className={styles.tag} aria-hidden>
@@ -86,7 +86,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   width={960}
                   height={1280}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me smiling like a goofball at the Qwilr office in Sydney"
+                  alt="Me on the beach"
                 />
                 <svg className={styles.svg} data-visible={visible} viewBox="0 0 136 766">
                   <use href={`${katakana}#katakana-profile`} />

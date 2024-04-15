@@ -73,7 +73,7 @@ export async function action({ context, request }) {
   await ses.send(
     new SendEmailCommand({
       Destination: {
-        ToAddresses: [context.cloudflare.env.EMAIL],
+        ToAddresses: ['markrapelo@gmail.com'], // Destination email address
       },
       Message: {
         Body: {
@@ -85,8 +85,8 @@ export async function action({ context, request }) {
           Data: `Portfolio message from ${email}`,
         },
       },
-      Source: `Portfolio <${context.cloudflare.env.FROM_EMAIL}>`,
-      ReplyToAddresses: [email],
+      Source: `Portfolio <${context.cloudflare.env.FROM_EMAIL}>`, // Source email address
+      ReplyToAddresses: [email], // Email address to reply to
     })
   );
 

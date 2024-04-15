@@ -19,7 +19,7 @@ import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
 
-// Prefetch draco decoader wasm
+// Prefetch draco decoder wasm
 export const links = () => {
   return [
     {
@@ -42,7 +42,7 @@ export const links = () => {
 export const meta = () => {
   return baseMeta({
     title: 'Designer + Developer',
-    description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
+    description: `Design portfolio of Mark Angel Rapelo — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
   });
 };
 
@@ -100,13 +100,34 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-1"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={1}
+        title="Human Fall Down Detection using Yolov8 and Mediapipe"
+        description="Developed an advanced algorithmic model that leverages the capabilities of YOLOv8 and MediaPipe. This model is designed to detect multi-person fall incidents in real-time through camera feeds."
+        buttonText="View project"
+        buttonLink="https://github.com/mamaaak/Yolov8-and-Mediapipe-for-Fall-Detection"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-2"
+        alternate
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
-        index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        index={2}
+        title="Portfolio Website using Vanilla CSS and Javascript"
+        description="First ever webpage created by me."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="https://github.com/mamaaak/First-Web-App"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -119,46 +140,20 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-2"
-        alternate
+        id="project-3"
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
-        index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        index={3}
+        title="Travel Website using React"
+        description="Designed and developed a travel website using React JS."
+        buttonText="Ongoing project"
         model={{
-          type: 'phone',
+          type: 'laptop',
           alt: 'App login screen',
           textures: [
             {
               srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
               placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
             },
           ],
         }}

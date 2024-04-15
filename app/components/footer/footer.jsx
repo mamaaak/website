@@ -8,11 +8,9 @@ export const Footer = ({ className }) => (
   <footer className={classes(styles.footer, className)}>
     <Text size="s" align="center">
       <span className={styles.date}>
-        {`© ${new Date().getFullYear()} ${config.name}.`}
+        {`© ${new Date().getFullYear()} Mark Rapelo`}
       </span>
-      <Link secondary className={styles.link} href="/humans.txt" target="_self">
-        Mamak the god
-      </Link>
+      
     </Text>
   </footer>
 );
