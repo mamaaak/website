@@ -2,7 +2,6 @@
   "name": "portfolio",
   "homepage": "https://mamaaak.github.io/portfolio",
   "description": "Portfolio site for Mark Rapelo",
-  "repository": "https://github.com/mamaaak/portfolio",
   "author": "Mark Rapelo",
   "sideEffects": false,
   "type": "module",

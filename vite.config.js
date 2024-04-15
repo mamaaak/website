@@ -21,6 +21,7 @@ export default defineConfig({
   server: {
     port: 7777,
   },
+  base: "/portfolio"
   plugins: [
     mdx({
       rehypePlugins: [[rehypeImgSize, { dir: 'public' }], rehypeSlug, rehypePrism],
