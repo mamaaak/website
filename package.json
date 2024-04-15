@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://hamishw.com",
+  "homepage": "https://mamaaak.github.io",
   "description": "Portfolio site for Hamish Williams",
   "repository": "https://github.com/HamishMW/portfolio.git",
   "author": "Hamish Williams",
@@ -52,6 +52,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "gh-pages": "^6.1.1",
     "node-fetch": "^3.3.2",
     "postcss": "^8.4.33",
     "postcss-custom-media": "^10.0.2",
