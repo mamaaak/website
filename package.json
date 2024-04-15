@@ -2,7 +2,7 @@
   "name": "portfolio",
   "homepage": "https://mamaaak.github.io",
   "description": "Portfolio site for Hamish Williams",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/mamaaak/portfolioreact",
   "author": "Hamish Williams",
   "sideEffects": false,
   "type": "module",
