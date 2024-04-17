@@ -21,7 +21,7 @@ export default defineConfig({
   server: {
     port: 7777,
   },
-  base: "/portfolio"
+  base: "/portfolio", // Added comma here
   plugins: [
     mdx({
       rehypePlugins: [[rehypeImgSize, { dir: 'public' }], rehypeSlug, rehypePrism],
