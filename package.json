@@ -1,17 +1,13 @@
 {
   "name": "portfolio",
-  "homepage": "https://mamaaak.github.io/website",
   "description": "Portfolio site for Mark Rapelo",
   "author": "Mark Rapelo",
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
     "dev": "node ./scripts/dev.cjs && remix vite:dev",
     "start": "wrangler pages dev ./build/client",
     "postinstall": "node ./scripts/draco.cjs",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
     "deploy:storybook": "wrangler pages deploy ./storybook-static --project-name portfolio-storybook --branch main"
